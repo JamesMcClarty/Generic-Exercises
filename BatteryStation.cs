@@ -3,11 +3,9 @@ using System;
 
 namespace generics{
 
-    public class BatteryStation : IStation<ElectricVehicle>
+    public class BatteryStation : Station<ElectricVehicle>
     {
-        public int capacity { get; set; }
-
-        public void refuel(List<ElectricVehicle> vehicles)
+        public override void refuel(List<ElectricVehicle> vehicles)
         {
             foreach (ElectricVehicle vehicle in vehicles)
             {
